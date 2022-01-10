@@ -4,7 +4,7 @@ const timeout = 10000; // after x ms, the image loading is aborted
 const _url1 = `https://picsum.photos/${_width}/${_height}?random=`;
 const _url2 = `https://picsum.photos/v2/list?page=${Math.round(Math.random() * 10)}&limit=100`;
 let urlChoice = 1;
-const loadingSvg = `<div class="svg-container"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+const loadingSvg = `<div class="svg-container"><svg class="svg-loading" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 width="26.349px" height="26.35px" viewBox="0 0 26.349 26.35" style="enable-background:new 0 0 26.349 26.35;"
 xml:space="preserve">
 <g>

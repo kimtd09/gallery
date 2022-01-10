@@ -71,7 +71,7 @@ img {
     width: 100%;
 }
 
-svg {
+.svg-loading {
     animation: rotation infinite linear 20s;
     fill: gray;
 }
@@ -153,7 +153,7 @@ svg {
     font-family: "Barlow";
     display: flex;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: white;
     border-radius: 7px;
     padding: 0 10px;
     height: 50px;
