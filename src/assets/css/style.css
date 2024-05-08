@@ -232,7 +232,6 @@ footer a, footer a:visited {
 }
 footer span {
   display: block;
-  text-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .gotop {
@@ -256,7 +255,7 @@ footer span {
 }
 .gotop:hover {
   cursor: pointer;
-  box-shadow: 0;
+  box-shadow: none;
   border: 1.5px solid #E2CBA4;
 }
 
