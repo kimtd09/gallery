@@ -149,9 +149,12 @@ header {
   align-items: center;
   height: 100%;
   width: 100%;
+  margin: 0;
 }
 
 .svg-loading {
+  width: 2rem;
+  height: 2rem;
   animation: rotation infinite linear 20s;
   fill: gray;
 }

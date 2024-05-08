@@ -1,7 +1,7 @@
 const _width = 300;
 const _height = 200;
 const maxImg = 200;
-const timeout = 10000; // after x ms, the image loading is aborted
+const timeout = 5000; // after x ms, the image loading is aborted
 const _url1 = `https://picsum.photos/${_width}/${_height}?random=`;
 const _url2 = `https://picsum.photos/v2/list?page=${Math.round(Math.random() * 10)}&limit=${maxImg}`;
 let urlChoice = 1; // low quality by default
@@ -141,7 +141,7 @@ let options = {
 
 let observer = new IntersectionObserver(callback2, options);
 
-// Create 100 div inside section
+// Create x div inside section
 function generateDivs() {
     const s = document.querySelector("section");
 
@@ -159,10 +159,19 @@ generateDivs();
 function close (e) {
     e.stopPropagation();
     document.getElementById("popup").classList.toggle("hidden");
+    const popUpContainer = document.querySelector(".subcontainer")
+
+    if(popUpContainer.classList.contains("w300p")) {
+        popUpContainer.classList.remove("w300p")
+    }
+    else {
+        popUpContainer.classList.remove("w90")
+    }
 }
 
 function popup(e) {
-    document.getElementById("popup").classList.toggle("hidden");
+    const popupContainer = document.getElementById("popup")
+    const popupElement = document.querySelector(".subcontainer")
 
     // Adding metadata
     const top = document.querySelector(".meta");
@@ -177,6 +186,11 @@ function popup(e) {
     container.lastElementChild.remove();
 
     container.innerHTML += loadingSvg;
+    // must be readded because we changed the DOM of the parent
+    document.getElementById("close").addEventListener("click", close)
+    // show popup now
+    popupContainer.classList.toggle("hidden");
+
     const img = new Image();
     img.classList.add("img");
     img.src = e.target.src;
@@ -186,13 +200,20 @@ function popup(e) {
                 container.lastElementChild.remove();
                 container.appendChild(img);
 
-                // must be readded because we changed the DOM of the parent
-                document.getElementById("close").addEventListener("click", close)
+                console.log(img)
+
+                // dynamic loading transition
+                if(img.naturalWidth < 350) {
+                    popupElement.classList.add("w300p") 
+                }
+                else {
+                    popupElement.classList.add("w90")
+                }
             })
-    }, 50);
+    }, 1000);
 }
 
 function gotop(e) {
     e.stopPropagation()
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'smooth' }) // smooth or fast
 }

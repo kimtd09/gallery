@@ -16,6 +16,11 @@
   overflow: hidden;
 }
 .popup .subcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 250px;
+  transition: width 0.8s, height 1s;
   max-height: 95%;
   max-width: 95%;
   background-color: white;
@@ -58,6 +63,7 @@
   cursor: pointer;
 }
 .popup .subcontainer #img {
+  display: flex;
   width: 100%;
   height: 100%;
 }
@@ -66,6 +72,21 @@
   width: 100%;
   height: 100%;
   border-radius: 3px;
+}
+
+.loading {
+  width: 90% !important;
+  height: 90% !important;
+}
+
+.w300p {
+  width: 300px !important;
+  height: 200px !important;
+}
+
+.w90 {
+  width: 90% !important;
+  height: 90% !important;
 }
 
 :root {
@@ -203,9 +224,12 @@ header h1 span {
   align-items: center;
   height: 100%;
   width: 100%;
+  margin: 0;
 }
 
 .svg-loading {
+  width: 2rem;
+  height: 2rem;
   animation: rotation infinite linear 20s;
   fill: gray;
 }
