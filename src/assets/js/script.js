@@ -35,6 +35,8 @@ function loadUrl1() {
         while (e.firstChild) {
             e.firstChild.remove();
         }
+        e.removeAttribute("data-author")
+        e.removeAttribute("data-link")
         e.setAttribute("lazySrc", _url1 + i);
         observer.observe(e);
     })
@@ -194,13 +196,14 @@ function popup(e) {
     const img = new Image();
     img.classList.add("img");
     img.src = e.target.src;
+
     setTimeout(() => {
-        img.decode()
+        img.decode() // image should be cached by the browser
             .then(() => {
                 container.lastElementChild.remove();
                 container.appendChild(img);
 
-                console.log(img)
+                // console.log(img)
 
                 // dynamic loading transition
                 if(img.naturalWidth < 350) {
@@ -210,7 +213,7 @@ function popup(e) {
                     popupElement.classList.add("w90")
                 }
             })
-    }, 1000);
+    }, 10);
 }
 
 function gotop(e) {

@@ -21,7 +21,7 @@
         flex-direction: column;
         width: 350px;
         height: 250px;
-        transition: width 0.8s, height 1s;        
+        transition: width 0.3s, height 0.4s;        
   
         &>* {
             margin: 0;
@@ -87,11 +87,6 @@
         border-radius: 3px;
       }
     }
-  }
-
-  .loading {
-    width: 90% !important;
-    height: 90% !important;
   }
 
   .w300p {
