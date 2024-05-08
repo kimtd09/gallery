@@ -5,40 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./src/assets/css/style.css">
     <title>Image Gallery</title>
 </head>
 
-<body>
     <header>
-        <h1>Performance Gallery</h1>
-        <h4>smooth, responsive & asynchronous</h4>
+        <div>
+            <h1>performance gallery
+                <span>smooth, responsive & asynchronous</span>
+            </h1>
+        </div>
     </header>
     <main>
-        <div class="links">
-            <span>API Lorem Picsum: </span>
-            <span class="link1 link1-selected" id="link1">Low Quality (lightweight)</span>
-            <span class="link2" id="link2">High Quality (heavyweight)</span>
+        <div class="api">
+            <span>API : </span>
+            <span class="link1 selected" id="link1">Lorem Picsum [Low Quality]</span>
+            <span class="link2" id="link2">Lorem Picsum [High Quality]</span>
         </div>
         <section class="section">
         </section>
     </main>
-    <div class="popup-bg hidden" id="popup-bg">
-
-        <div class="popup-container" id="popup-container">
-            <div class="popup-top">
-                <div class="popup-meta"></div>
-                <svg id="popup-close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                    fill="#000000">
-                    <path d="M0 0h24v24H0V0z" fill="none" />
-                    <path
-                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
-                </svg>
+    <div class="popup hidden" id="popup">
+        <div class="subcontainer">
+            <div class="header">
+                <div class="meta" id="meta"></div>
+                <svg class="close" id="close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
             </div>
-            <div class="popup-mid" id="popup-mid"><img id="popup-img"></div>
+            <div id="img"><img class="img"></div>
         </div>
     </div>
-    <script src="./assets/js/script.js"></script>
+    <footer>
+        <span>UI: <a href="https://codepen.io/vedadesigns" target="_blank">@vedadesigns</a></span>
+        <span>Code: <a href="https://kimtd.netlify.app">Kim</a></span>
+    </footer>
+    <div class="gotop">
+        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 6V18M12 6L7 11M12 6L17 11" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+    <script src="./src/assets/js/script.js"></script>
 </body>
 
 </html>

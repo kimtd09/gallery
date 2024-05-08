@@ -1,0 +1,28 @@
+@media ( width < 540px ) {
+    .api {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1rem;
+
+        span {
+            padding: 0 1rem;
+        }
+
+        .selected {
+            border-left: 3px solid var(--red);
+            border-right: 3px solid var(--red);
+            border-bottom: 0;
+        }
+    }
+}
+
+@media screen and ( width < 900px ) {
+    header {
+        margin: 1rem; 
+
+        h1 span {
+            margin-top: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+}
