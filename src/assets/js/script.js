@@ -1,6 +1,6 @@
 const _width = 300;
 const _height = 200;
-const maxImg = 200;
+const maxImg = 99;
 const timeout = 5000; // after x ms, the image loading is aborted
 const _url1 = `https://picsum.photos/${_width}/${_height}?random=`;
 const _url2 = `https://picsum.photos/v2/list?page=${Math.round(Math.random() * 10)}&limit=${maxImg}`;
@@ -50,7 +50,7 @@ async function loadUrl2() {
     document.getElementById("link2").classList.toggle("selected", true);
     const r = await fetch(_url2);
     const d = await r.json();
-    // console.log(d);
+    console.log("json"+d);
 
     document.querySelectorAll(".container").forEach((e, i) => {
         observer.unobserve(e);
