@@ -78,6 +78,10 @@ header {
 
   .selected {
     border-bottom: 2px solid var(--red);
+    quality {
+      color: var(--red);
+      font-weight: 700;
+    }
   }
 
   .link1, .link2 {
