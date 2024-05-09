@@ -67,7 +67,6 @@ header {
   background-color: var(--background);
   padding-top: 0.2rem;
   padding-bottom: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.201) 1.95px 1.95px 2.6px;
   z-index: 10; // to avoid bad overlap
 
   display: flex;
@@ -101,6 +100,10 @@ header {
       background-color: white;
     }
   }
+}
+
+.sticky {
+  box-shadow: rgba(0, 0, 0, 0.201) 1.95px 1.95px 2.6px;
 }
 
 .section {

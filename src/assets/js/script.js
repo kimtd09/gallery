@@ -13,12 +13,15 @@ document.getElementById("link2").addEventListener("click", loadUrl2);
 document.querySelector(".gotop").addEventListener('click', gotop);
 window.addEventListener("scroll", e => {
     const gotop = document.querySelector(".gotop")
+    const apibar = document.querySelector(".api")
 
     if(window.scrollY > 300) {
         gotop.classList.remove("hidden")
+        apibar.classList.add("sticky")
     }
     else {
         gotop.classList.add("hidden")
+        apibar.classList.remove("sticky")
     }
 })
 
