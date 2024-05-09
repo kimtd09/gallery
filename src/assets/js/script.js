@@ -201,6 +201,9 @@ function popup(e) {
             .then(() => {
                 container.lastElementChild.remove();
                 container.appendChild(img);
+                img.addEventListener("click", () => {
+                    img.classList.toggle("zoom")
+                })
 
                 // console.log(img)
 
