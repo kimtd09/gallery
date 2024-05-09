@@ -50,7 +50,6 @@ async function loadUrl2() {
     document.getElementById("link2").classList.toggle("selected", true);
     const r = await fetch(_url2);
     const d = await r.json();
-    console.log("json"+d);
 
     document.querySelectorAll(".container").forEach((e, i) => {
         observer.unobserve(e);
