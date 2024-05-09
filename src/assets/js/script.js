@@ -86,7 +86,6 @@ let callback = (entries, observer) => {
     });
 }
 
-let promises = [];
 let callback2 = (entries, observer) => {
     entries.forEach((element, index) => {
         if (element.isIntersecting) {
