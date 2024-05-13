@@ -112,7 +112,6 @@ body {
   font-family: "Raleway", sans-serif;
   text-align: center;
   margin: 0;
-  cursor: url("zoom-in.png");
 }
 
 div {
@@ -301,14 +300,6 @@ footer span {
   border: 1.5px solid #E2CBA4;
 }
 
-@font-face {
-  font-family: "Barlow";
-  src: url("../fonts/Barlow-Regular.ttf");
-}
-@font-face {
-  font-family: "Barlow Thin";
-  src: url("../fonts/Barlow-Thin.ttf");
-}
 @keyframes load {
   0% {
     opacity: 0;
