@@ -11,6 +11,7 @@ const errorSvg = `<div class="svg-container"><svg xmlns="http://www.w3.org/2000/
 document.getElementById("link1").addEventListener("click", loadUrl1);
 document.getElementById("link2").addEventListener("click", loadUrl2);
 document.querySelector(".gotop").addEventListener('click', gotop);
+
 window.addEventListener("scroll", e => {
     const gotop = document.querySelector(".gotop")
     const apibar = document.querySelector(".api")
@@ -161,7 +162,12 @@ generateDivs();
 
 function close (e) {
     e.stopPropagation();
-    document.getElementById("popup").classList.toggle("hidden");
+    const modal = document.getElementById("popup");
+    modal.classList.toggle("hidden");
+
+    if (modal.classList.contains("hidden")) {
+        document.getElementById("img").src = loadingSvg;
+    }
     const popUpContainer = document.querySelector(".subcontainer")
 
     if(popUpContainer.classList.contains("w300p")) {
